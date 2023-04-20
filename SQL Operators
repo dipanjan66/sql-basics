@@ -1,0 +1,12 @@
+// SQL Operators:=>
+
+   = , <, >, >=, <=, <>, !=, BETWEEN, ORDER BY, IN, NOT IN, LIKE, ALIASE, DISTINCT, LIMIT, CASE:
+
+Different SQL Operators are below:==>
+
+
+Comparison Operators: =, <>, != , >, <, >=, <=
+
+Arithmetic Operators: +, -, *, /, %
+
+Logical Operators: AND, OR, NOT, IN, BETWEEN, LIKE etc.  

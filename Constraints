@@ -1,0 +1,15 @@
+// Constraints:=>
+// Constraints refers to Limitation or Restrictions applied to Column in a  Table.
+
+Different Constraints are below:-
+
+
+CHECK - Helps to control the Values being inserted into a Table column.
+
+NOT NULL - Helps to ensure that the column value in every Row is never Blank or Empty or Null
+
+UNIQUE - Helps to ensure that the Column value in every row is Unique.
+
+PRIMARY KEY - Ensure that the Column value in every row is Unique and has no NULL values.
+
+FOREIGN KEY - Helps to form Parent Child relationship between Tables. Child table references column values from the parent table.

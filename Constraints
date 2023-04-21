@@ -1,15 +1,60 @@
-// Constraints:=>
-// Constraints refers to Limitation or Restrictions applied to Column in a  Table.
-
-Different Constraints are below:-
+-- Constraint in SQL:==>
 
 
-CHECK - Helps to control the Values being inserted into a Table column.
+-- Constraints refers to Limitation or Restrictions applied to Column in a Table.
 
-NOT NULL - Helps to ensure that the column value in every Row is never Blank or Empty or Null
+-- Type if Constraint down below:==>
 
-UNIQUE - Helps to ensure that the Column value in every row is Unique.
+CHECK -- Helps to validate the values of a column to meet a particular condition.
 
-PRIMARY KEY - Ensure that the Column value in every row is Unique and has no NULL values.
 
-FOREIGN KEY - Helps to form Parent Child relationship between Tables. Child table references column values from the parent table.
+DEFAULT -- It specifies a default value for the column when no value is specified by the user.
+
+
+NOT NULL -- Helps to ensure that the column value in every Row is never Blank or Empty or Null
+
+
+UNIQUE -- Helps to ensure that the Column value in every row is Unique.
+
+
+PRIMARY KEY -- Ensure that the Column value in every row is Unique and has no NULL values.
+--(Means - Primary key is combination of UNIQUE and NOT NULL)
+
+
+FOREIGN KEY -- Helps to form Parent Child relationship between Tables. Child table references column values from the parent table. 
+OR -- It is a field which can uniquely identify each row in another table and this constraint is used to specify a field as a foreign key.
+
+
+--=======================================================
+
+--Example:- Table 01:-------------------
+
+create table employee(
+  emp_id INT PRIMARY KEY,
+  empName VARCHAR(255) NOT NULL,
+  emp_age int CHECK (emp_age >= 18),
+  emp_country varchar(58) DEFAULT 'India' -- if anybody forgot to fill emp_country, it will automatically take - India
+  emp_adhaar int UNIQUE
+)
+
+
+insert into employee(emp_id, empName , emp_age, emp_country, emp_adhaar)
+values
+(101, 'David', 25, 'India', 589714526987)
+(102, 'Rakesh', 28, 'India', 589714526989)
+
+
+-- Another Table:- Table 02:----------------
+
+create table company(
+  emp_id INT FOREIGN KEY references employee(emp_id),
+  emp_post varchar(66) not null
+
+)
+
+
+insert into company
+values
+(102, 'Manager')  -- Foreign key value is the value which should have in Primary key.
+
+

@@ -1,7 +1,56 @@
-//SQL Data Type:=>
 
-VARCHAR
-INT
-DATE
-FLOAT
-BOOLEAN
+-- Data Type in SQL:==>
+
+
+
+-------------------------------------------------------------------------
+
+NUMERIC Date Type - It store integer values without Decimal point
+
+-- Numeric Data Types are:-
+
+bit -- It store Binary Digit. Thats are ==> 0 and 1
+
+tinyint -- It can store value between 0 and 255
+
+smallint -- It can store values between (-32768) and 32767 (or +32767)
+
+int  -- (-2147483648) to (+2147483647)
+
+bigint  --  (-9223372036854775808) to (+9223372036854775807)
+
+Decimal  -- (-10^32)+1 to (+10^32)-1
+
+------------------------------------------------------------------------
+Approximate NUMERIC Date Type - Used to store Real number value with a Decimal point.
+
+Example -  24.06
+
+1) FLOAT
+2) Real
+
+-------------------------------------------------------------------------
+
+DATE and TIME  - Data Type  --(Store Date and Time)
+
+1) Date -- Used to store Date in DD/MM/YYYY format
+
+2) Time  -- Used to store time in hh:mm:ss format
+
+3) DateTime  -- Store both Date and Time
+
+-----------------------------------------------------------------------
+
+String Data Type:-- It store Text like - Sentence or words
+
+1) CHAR  -- Used to store characters upto 8000. It's length is fix. We can not change it.
+
+2) VARCHAR -- Used to store characters upto 8000. It's length is variable and we can change it.
+-----------------------------------------------------------------------
+
+BOOLEAN:-  Data Type
+
+1) True
+
+2) False
+

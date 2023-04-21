@@ -1,12 +1,148 @@
-// SQL Operators:=>
+-- SQL Operators:-
 
-   = , <, >, >=, <=, <>, !=, BETWEEN, ORDER BY, IN, NOT IN, LIKE, ALIASE, DISTINCT, LIMIT, CASE:
+-- SQL Operators down below:==>
 
-Different SQL Operators are below:==>
+Comparison Operators:  =, <>, != , >, <, >=, <=
 
 
-Comparison Operators: =, <>, != , >, <, >=, <=
+Arithmetic Operators:  +, -, *, /, %
 
-Arithmetic Operators: +, -, *, /, %
 
-Logical Operators: AND, OR, NOT, IN, BETWEEN, LIKE etc.  
+Logical Operators:  AND, OR, NOT, IN, BETWEEN, LIKE etc.  
+
+
+Bitwise Operators:  &, |, ^
+
+
+UNION and UNION ALL operators
+
+--============================================================================
+
+-- Explanation:-
+
+Arithmetic Operators:-
+ 
++   ==> Addition
+ 
+-   ==> Substraction
+  
+*   ==> Multiplication
+
+/   ==> Division  ==> 8 / 2 = 4
+
+%   ==> Modulo  ==> Gives Remainder ==> 5 % 3 = 2
+
+--------------------------------------------------------
+
+Comparison Operators:-
+
+<>   ==> Not Equal to
+
+!=   ==> Not Equal to
+
+--------------------------------------------------------
+
+Bitwise Operators:-
+
+It compare each bit of the first operand to the corresponding bit of the second operand and produce a final result.
+
+
+&   ===> Bitwise AND
+
+|   ===> Bitwise OR
+
+^   ===> Bitwise XOR
+
+
+----------------------------------------------------------------
+
+-- LIKE Operator:==>
+
+--Syntax:-
+
+SELECT column1, column2, ...
+FROM table_name
+WHERE columnN LIKE ‘c%’;  -- Start with c
+
+-- LIKE is Case Sensitive
+
+-- ILIKE is not Case Sensitive
+
+
+-- Example 01:----------
+
+-- Fname is a Column Name
+
+select * from student where Fname like 'a%';    -- Start with a
+
+
+
+-- Example 02:----------
+
+select * from student where Fname like '%a';     -- End with a
+
+
+-- Example 03:----------
+
+select * from student where Fname like '%a%';     -- a can be anywhere
+
+
+-- Example 04:----------
+select * from student where Fname like 'n%i;      -- Start with n and End with i
+
+
+------------------------------------------------------------------------------------------
+
+-- BETWEEN Operator:==>
+
+
+--Syntax:-
+
+
+SELECT column_name(s)
+FROM table_name
+WHERE column_name BETWEEN value1 AND value2;
+
+
+
+-- Example 01:---------
+
+select StudentID, Fname, Lname, Marks
+from student
+where Marks between 500 and 800;
+
+
+
+-- Example 02:---------
+
+-- amount is a Column
+
+
+select * from payment
+where amount BETWEEN 8 and 9 
+
+--------------------------------------------------------------------------------
+
+-- IN Operator:==>
+
+-- Syntax:-
+
+SELECT column_name(s)
+FROM table_name
+WHERE column_name IN (value1, value2, ...);
+
+
+
+--Example:-------
+
+
+select StudentID, Fname, Lname
+from student
+where City in ('Tripura', 'Rachi', 'Kolkata', 'Falakata');
+
+
+
+
+
+
+ 
